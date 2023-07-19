@@ -9,7 +9,7 @@ public class FishParameter : ScriptableObject
     {
         enFish_A,
         enFish_B,
-        enFish_C,
+        enFish_Human,
     }
 
 

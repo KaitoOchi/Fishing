@@ -10,6 +10,8 @@ public class PictureBook : MonoBehaviour
     GameObject ButtonPrefab;
     [SerializeField, Header("ボタンを配置する場所")]
     GameObject Content;
+    [SerializeField, Header("未発見時のアイコン")]
+    Sprite DiscoverImage = null;
 
     List<FishParameter> m_fishParamList = null;     //おさかなリスト。
 
@@ -21,6 +23,9 @@ public class PictureBook : MonoBehaviour
 
         if (obj != null)
         {
+            //セーブデータを取得。
+            SaveDataManager saveManager = FindObjectOfType<SaveDataManager>();
+
             //おさかなリストを取得。
             FishParamList fishList = obj as FishParamList;
             m_fishParamList = fishList.GetFishList();
@@ -31,8 +36,20 @@ public class PictureBook : MonoBehaviour
             {
                 //ボタンを生成。
                 GameObject prefab = Instantiate(ButtonPrefab, Vector3.zero, Quaternion.identity, Content.transform);
-                prefab.GetComponent<Image>().sprite = m_fishParamList[i].GetSprite();
                 prefab.GetComponent<PictureBookButton>().SetNumber(i);
+
+                //未発見なら表示しない。
+                if(saveManager.GetSaveData().saveData.isGet[i] == false)
+                {
+                    prefab.GetComponent<PictureBookButton>().SetDiscover();
+                    prefab.GetComponent<Image>().sprite = DiscoverImage;
+                }
+                //発見済みなら。
+                else
+                {
+                    prefab.GetComponent<PictureBookButton>().SetNumber(i);
+                    prefab.GetComponent<Image>().sprite = m_fishParamList[i].GetSprite();
+                }
             }
         }
         else
