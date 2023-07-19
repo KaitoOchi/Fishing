@@ -1,0 +1,75 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu( menuName = "MyGame/Create FishParameterTable", fileName = "FishParameterTable")]
+public class FishParameter : ScriptableObject
+{
+    public enum EnFishType
+    {
+        enFish_A,
+        enFish_B,
+    }
+
+
+    [SerializeField, Header("内部番号")]
+    int InternalNum = 0;
+
+    [SerializeField, Header("名前")]
+    string Name = "";
+
+    [SerializeField, Header("属性")]
+    EnFishType FishType = EnFishType.enFish_A;
+
+    [SerializeField, Header("最小サイズ(cm)")]
+    float SizeMin = 0.0f;
+
+    [SerializeField, Header("最大サイズ(cm)")]
+    float SizeMax = 0.0f;
+
+
+    /// <summary>
+    /// 内部番号を取得。
+    /// </summary>
+    /// <returns></returns>
+    public int GetInternalNum()
+    {
+        return InternalNum;
+    }
+
+    /// <summary>
+    /// 名前を取得。
+    /// </summary>
+    /// <returns></returns>
+    public string GetName()
+    {
+        return Name;
+    }
+
+    /// <summary>
+    /// 魚の種類を取得。
+    /// </summary>
+    /// <returns></returns>
+    public EnFishType GetFishType()
+    {
+        return FishType;
+    }
+
+    /// <summary>
+    /// 最小サイズを取得。
+    /// </summary>
+    /// <returns></returns>
+    public float GetSizeMin()
+    {
+        return SizeMin;
+    }
+
+    /// <summary>
+    /// 最大サイズを取得。
+    /// </summary>
+    /// <returns></returns>
+    public float GetSizeMax()
+    {
+        return SizeMax;
+    }
+}
