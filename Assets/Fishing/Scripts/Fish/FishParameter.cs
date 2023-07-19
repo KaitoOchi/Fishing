@@ -22,6 +22,12 @@ public class FishParameter : ScriptableObject
     [SerializeField, Header("ƒ‚ƒfƒ‹")]
     Mesh Model = null;
 
+    [SerializeField, Header("‰æ‘œ")]
+    Sprite ExplainSprite = null;
+
+    [SerializeField, Header("à–¾•¶")]
+    string ExplainString = "";
+
     [SerializeField, Header("‘®«")]
     EnFishType FishType = EnFishType.enFish_A;
 
@@ -60,6 +66,24 @@ public class FishParameter : ScriptableObject
     public Mesh GetModel()
     {
         return Model;
+    }
+
+    /// <summary>
+    /// ‰æ‘œ‚ğæ“¾B
+    /// </summary>
+    /// <returns></returns>
+    public Sprite GetSprite()
+    {
+        return ExplainSprite;
+    }
+
+    /// <summary>
+    /// à–¾•¶‚ğæ“¾B
+    /// </summary>
+    /// <returns></returns>
+    public string GetExplain()
+    {
+        return ExplainString;
     }
 
     /// <summary>
