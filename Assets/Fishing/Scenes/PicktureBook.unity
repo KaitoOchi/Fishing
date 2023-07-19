@@ -492,15 +492,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 424091969}
-        m_TargetAssemblyTypeName: PictureBookButton, Assembly-CSharp
-        m_MethodName: ExitClick
-        m_Mode: 1
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: SceneChange
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Game
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &424091967
@@ -550,9 +550,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 424091964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c120efc316bc8941af3a6876d64701f, type: 3}
+  m_Script: {fileID: 11500000, guid: 265f09a9ae9669b4ab9ce277bfa7a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FadeCanvas: {fileID: 7462586460683239440, guid: fa2987100fcc3174f9cedba2e6fabf42, type: 3}
 --- !u!1 &615814748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,7 +1920,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072022314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

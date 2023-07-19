@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: MaguroParam
   m_EditorClassIdentifier: 
   InternalNum: 0
-  Name: maguro
-  Model: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  Name: "\u3053\u3093"
+  Model: {fileID: 1925539161038096126, guid: 8f0e34ed384f82644b755baaaa5897da, type: 3}
   ExplainSprite: {fileID: 21300000, guid: 9c21d1c9797cd1f4a8e4bd6a6d6d6b31, type: 3}
-  ExplainString: "\u3046\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A\u304A"
+  ExplainString: "\u30DE\u30B0\u30ED\u3001\u64AE\u5F71\u958B\u59CB"
   FishType: 0
   Rank: 2
   SizeMin: 10
