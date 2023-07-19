@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Fishing/Scenes/Title.unity
+    guid: bc0c6badef206b64a801f21f0187de79
+  - enabled: 1
+    path: Assets/Fishing/Scenes/Game.unity
+    guid: a6b1698fef9435844b6f73c1a4735018
+  - enabled: 1
+    path: Assets/Fishing/Scenes/PicktureBook.unity
+    guid: 27e40f6e827e79841a98191fd4eb2f1c
   m_configObjects: {}
