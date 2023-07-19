@@ -20,7 +20,7 @@ public class FishParameter : ScriptableObject
     string Name = "";
 
     [SerializeField, Header("ƒ‚ƒfƒ‹")]
-    Mesh Model = null;
+    GameObject Model = null;
 
     [SerializeField, Header("‰æ‘œ")]
     Sprite ExplainSprite = null;
@@ -63,7 +63,7 @@ public class FishParameter : ScriptableObject
     /// ƒ‚ƒfƒ‹‚ğæ“¾B
     /// </summary>
     /// <returns></returns>
-    public Mesh GetModel()
+    public GameObject GetModel()
     {
         return Model;
     }
