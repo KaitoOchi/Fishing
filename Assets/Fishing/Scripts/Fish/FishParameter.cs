@@ -19,6 +19,9 @@ public class FishParameter : ScriptableObject
     [SerializeField, Header("名前")]
     string Name = "";
 
+    [SerializeField, Header("モデル")]
+    Mesh Model = null;
+
     [SerializeField, Header("属性")]
     EnFishType FishType = EnFishType.enFish_A;
 
@@ -48,6 +51,15 @@ public class FishParameter : ScriptableObject
     public string GetName()
     {
         return Name;
+    }
+
+    /// <summary>
+    /// モデルを取得。
+    /// </summary>
+    /// <returns></returns>
+    public Mesh GetModel()
+    {
+        return Model;
     }
 
     /// <summary>
