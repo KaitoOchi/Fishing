@@ -1398,6 +1398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonPrefab: {fileID: 8409522339256497472, guid: 48db6cf791ae01a40ac8cb635fb53158, type: 3}
   Content: {fileID: 153292354}
+  DiscoverImage: {fileID: 21300000, guid: a09fab74f88db3d4db4dc6558058cdbc, type: 3}
 --- !u!4 &1702994924
 Transform:
   m_ObjectHideFlags: 0
