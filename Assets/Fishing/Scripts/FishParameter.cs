@@ -9,6 +9,7 @@ public class FishParameter : ScriptableObject
     {
         enFish_A,
         enFish_B,
+        enFish_C,
     }
 
 
@@ -20,6 +21,9 @@ public class FishParameter : ScriptableObject
 
     [SerializeField, Header("属性")]
     EnFishType FishType = EnFishType.enFish_A;
+
+    [SerializeField, Header("星の数")]
+    int Rank = 0;
 
     [SerializeField, Header("最小サイズ(cm)")]
     float SizeMin = 0.0f;
@@ -53,6 +57,15 @@ public class FishParameter : ScriptableObject
     public EnFishType GetFishType()
     {
         return FishType;
+    }
+
+    /// <summary>
+    /// 星の数を取得。
+    /// </summary>
+    /// <returns></returns>
+    public int GetRank()
+    {
+        return Rank;
     }
 
     /// <summary>

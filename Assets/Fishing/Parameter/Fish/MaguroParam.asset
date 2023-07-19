@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MaguroParam
   m_EditorClassIdentifier: 
   InternalNum: 0
-  Name: 
+  Name: maguro
   FishType: 0
-  SizeMin: 0
-  SizeMax: 0
+  Rank: 2
+  SizeMin: 10
+  SizeMax: 200
