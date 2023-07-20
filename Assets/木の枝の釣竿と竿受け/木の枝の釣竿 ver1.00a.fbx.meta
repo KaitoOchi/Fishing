@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 881d1f7d7539c5e4d9cc81534ab9398e
+guid: 9c50ab0a4d1a7c9418d0e1b04e072f2b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,88 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 0.face00
-    second: {fileID: 2100000, guid: a7d5c80a1f16b1246b6edb0646e75029, type: 2}
+      name: 0.ki
+    second: {fileID: 2100000, guid: 59679789e91609743a557fc9c738802a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 1.face01
-    second: {fileID: 2100000, guid: 41d2c2c95ab1aca40a04066b5171119f, type: 2}
+      name: 1.kidanmen
+    second: {fileID: 2100000, guid: 215c6148397a2a44394ee6ae02e6a344, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 10.body02
-    second: {fileID: 2100000, guid: 90ddf1e421017d441878ffad39be7c02, type: 2}
+      name: 2.tetsu
+    second: {fileID: 2100000, guid: 571f7124f7bd3874b9d2990b8f406d38, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 11.hair00
-    second: {fileID: 2100000, guid: 333fded312912154d887cc1c441bbb03, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 12.hair01
-    second: {fileID: 2100000, guid: fd0b4b78bcba18f4ba0c5920eee30b3e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 13.hairshadow
-    second: {fileID: 2100000, guid: 0b21472034fafa34f90a85139c566071, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 14.cheek
-    second: {fileID: 2100000, guid: 26fdc35319583e64eab7e038269f51ba, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 15.lens
-    second: {fileID: 2100000, guid: 307f3d99af18b204c9ffe8c0b08eaf6e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 16.wing
-    second: {fileID: 2100000, guid: 9a1d47454e6bce248817539b9a4bfcf4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 2.eye_hi
-    second: {fileID: 2100000, guid: 75897e49a44d2ba4b8eb8be73724b425, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 3.eye_hi2
-    second: {fileID: 2100000, guid: cbd1a51a4afdd4f4a9be78a480bd3640, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 4.skin
-    second: {fileID: 2100000, guid: 450d58ad33747ef44af2c99fff621c42, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 5.body00
-    second: {fileID: 2100000, guid: b304e712c111e9f4eba2323f0548778b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 6.body01
-    second: {fileID: 2100000, guid: 24aef50beb4b16b4c84036f5c23abad6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 7.body_pink
-    second: {fileID: 2100000, guid: 02eeac9a5e581fb4eac8c9b504c29da1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 8.body_green
-    second: {fileID: 2100000, guid: 5d15b68c8d60ccb4a9b6071539482a5f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 9.body_green2
-    second: {fileID: 2100000, guid: 7589a41b06195454e9eab7927aa0d554, type: 2}
+      name: 3.ito
+    second: {fileID: 2100000, guid: f1a80b53019b642498333b6251ebb42e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -176,13 +111,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
