@@ -40,6 +40,9 @@ public class FishParameter : ScriptableObject
     [SerializeField, Header("最大サイズ(cm)")]
     float SizeMax = 0.0f;
 
+    [SerializeField, Header("入手金額")]
+    int money = 0;
+
 
     /// <summary>
     /// 内部番号を取得。
@@ -120,5 +123,15 @@ public class FishParameter : ScriptableObject
     public float GetSizeMax()
     {
         return SizeMax;
+    }
+
+
+    /// <summary>
+    /// 金額を取得。
+    /// </summary>
+    /// <returns></returns>
+    public int GetMoney()
+    {
+        return money;
     }
 }

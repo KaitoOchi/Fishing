@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     float RotateStep = 1.0f;
     [SerializeField, Header("カメラ")]
     GameObject GameCamera;
+    [SerializeField, Header("チャージ画像")]
+    GameObject ChargeCanvas;
 
 
     /// <summary>
@@ -24,10 +26,12 @@ public class PlayerMove : MonoBehaviour
 
     Rigidbody       m_rigidbody;            //Rigidbody。
     Animator        m_animator;             //Animator。
+    PlayerFishing   m_playerFishing;
 
     Vector3         m_moveSpeed;            //移動速度。
     PlayerState     m_playerState;          //プレイヤーステート。
-    bool            m_cursorLock = false;   //カーソルのロック状態。
+    bool            m_cursorLock = true;    //カーソルのロック状態。
+    float m_charge = 0.0f;
 
 
     /// <summary>
@@ -48,11 +52,38 @@ public class PlayerMove : MonoBehaviour
         return m_playerState != PlayerState.enState_Fishing;
     }
 
+    /// <summary>
+    /// 釣りの開始を通知。
+    /// </summary>
+    public void NotifyStartFishing(float gauge)
+    {
+        //釣りステートに遷移。
+        m_playerState = PlayerState.enState_Fishing;
+
+        m_playerFishing.StartFishing(gauge);
+    }
+
+    /// <summary>
+    /// 釣りの終了を通知。
+    /// </summary>
+    public void NotifyEndFishing()
+    {
+        //待機状態へ遷移。
+        m_playerState = PlayerState.enState_Idle;
+
+        //釣り終了状態にする。
+        m_animator.SetBool("FishingFlag", false);
+        //待機状態にする。
+        m_animator.SetBool("MoveFlag", false);
+    }
+
 
     private void Start()
     {
         m_rigidbody = GetComponent<Rigidbody>();
         m_animator = GetComponent<Animator>();
+
+        m_playerFishing = GetComponent<PlayerFishing>();
 
         //カーソルをロック状態にする。
         Cursor.lockState = CursorLockMode.Locked;
@@ -146,10 +177,8 @@ public class PlayerMove : MonoBehaviour
         //左クリックが入力されたら。
         if(Input.GetMouseButtonDown(1))
         {
-            Debug.Log("A");
-
-            //釣りステートに遷移。
-            m_playerState = PlayerState.enState_Fishing;
+            GameObject obj = Instantiate(ChargeCanvas);
+            obj.GetComponent<ChargeGauge>().SetPlayerMove(this);
         }
     }
 
@@ -180,23 +209,31 @@ public class PlayerMove : MonoBehaviour
     /// </summary>
     void ProcessCommonState()
     {
-        if(m_playerState == PlayerState.enState_Idle)
+        switch (m_playerState)
         {
-            if (m_moveSpeed.sqrMagnitude > 0.0f)
-            {
-                //移動状態にする。
-                m_animator.SetBool("MoveFlag", true);
-                m_playerState = PlayerState.enState_Walk;
-            }
-        }
-        else if(m_playerState == PlayerState.enState_Walk)
-        {
-            if (m_moveSpeed.sqrMagnitude == 0.0f)
-            {
-                //待機状態にする。
-                m_animator.SetBool("MoveFlag", false);
-                m_playerState = PlayerState.enState_Idle;
-            }
+            case PlayerState.enState_Idle:
+
+                if (m_moveSpeed.sqrMagnitude > 0.0f)
+                {
+                    //移動状態にする。
+                    m_animator.SetBool("MoveFlag", true);
+                    m_playerState = PlayerState.enState_Walk;
+                }
+                break;
+
+            case PlayerState.enState_Walk:
+
+                if (m_moveSpeed.sqrMagnitude == 0.0f)
+                {
+                    //待機状態にする。
+                    m_animator.SetBool("MoveFlag", false);
+                    m_playerState = PlayerState.enState_Idle;
+                }
+                break;
+
+            case PlayerState.enState_Fishing:
+
+                break;
         }
     }
 
@@ -205,7 +242,8 @@ public class PlayerMove : MonoBehaviour
     /// </summary>
     void ProcessFishingStateTransition()
     {
-        //ProcessCommonState();
+        //釣り開始状態にする。
+        m_animator.SetBool("FishingFlag", true);
     }
 
     /// <summary>
