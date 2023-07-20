@@ -32,6 +32,11 @@ public class PlayerCamera : MonoBehaviour
             return;
         }
 
+        if(!PlayerMove.GetCanMove())
+        {
+            return;
+        }
+
         //注視点をプレイヤーに合わせる。
         m_parentObject.transform.position = PlayerMove.transform.position;
 

@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     {
         enState_Idle,
         enState_Walk,
+        enState_Fishing,
     }
 
     Rigidbody       m_rigidbody;            //Rigidbody。
@@ -36,6 +37,15 @@ public class PlayerMove : MonoBehaviour
     public bool GetCursorLock()
     {
         return m_cursorLock;
+    }
+
+    /// <summary>
+    /// 動ける状態かどうかを取得。
+    /// </summary>
+    /// <returns></returns>
+    public bool GetCanMove()
+    {
+        return m_playerState != PlayerState.enState_Fishing;
     }
 
 
@@ -65,6 +75,8 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         UpdateCursorLock();
+
+        InputKey();
     }
 
     /// <summary>
@@ -72,6 +84,11 @@ public class PlayerMove : MonoBehaviour
     /// </summary>
     void Move()
     {
+        if (!GetCanMove())
+        {
+            return;
+        }
+
         //移動速度と方向を初期化。
         m_moveSpeed = Vector3.zero;
         Vector3 moveDirection = Vector3.zero;
@@ -105,6 +122,11 @@ public class PlayerMove : MonoBehaviour
     /// </summary>
     void Rotation()
     {
+        if (!GetCanMove())
+        {
+            return;
+        }
+
         //入力があったなら。
         if (m_moveSpeed.sqrMagnitude > 0.0f)
         {
@@ -113,6 +135,21 @@ public class PlayerMove : MonoBehaviour
 
             //回転を徐々に与える。
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, RotateStep);
+        }
+    }
+
+    /// <summary>
+    /// 入力処理。
+    /// </summary>
+    void InputKey()
+    {
+        //左クリックが入力されたら。
+        if(Input.GetMouseButtonDown(1))
+        {
+            Debug.Log("A");
+
+            //釣りステートに遷移。
+            m_playerState = PlayerState.enState_Fishing;
         }
     }
 
@@ -129,6 +166,10 @@ public class PlayerMove : MonoBehaviour
 
         case PlayerState.enState_Walk:
                 ProcessCommonState();
+            break;
+
+        case PlayerState.enState_Fishing:
+                ProcessFishingStateTransition();
             break;
         }
 
@@ -157,6 +198,14 @@ public class PlayerMove : MonoBehaviour
                 m_playerState = PlayerState.enState_Idle;
             }
         }
+    }
+
+    /// <summary>
+    /// 釣りステートの遷移処理。
+    /// </summary>
+    void ProcessFishingStateTransition()
+    {
+        //ProcessCommonState();
     }
 
     /// <summary>
