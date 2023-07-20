@@ -11,7 +11,7 @@ public class SaveData
         public int money;
         public int rodPower;
         public int[] feed;
-        public bool[] isGet;
+        public int[] GetNum;
         public float[] maxSize;
     }
 

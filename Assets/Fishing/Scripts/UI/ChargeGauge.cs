@@ -33,7 +33,7 @@ public class ChargeGauge : MonoBehaviour
     {
         if(m_isReverse)
         {
-            m_gauge -= Time.deltaTime * ChargeSpeed * -m_gauge;
+            m_gauge -= Time.deltaTime * ChargeSpeed * m_gauge;
         }
         else
         {
@@ -43,7 +43,7 @@ public class ChargeGauge : MonoBehaviour
         Debug.Log(m_gauge);
 
         //ˆê’è”ÍˆÍ‚ğ’´‚¦‚½‚çB
-        if (m_gauge < 0.0f || m_gauge > 1.0f)
+        if (m_gauge < 0.01f || m_gauge > 1.0f)
         {
             m_isReverse = !m_isReverse;
 

@@ -56,7 +56,7 @@ public class DrawFishParam : MonoBehaviour
             }
 
             // 獲得していない種類なら
-            if (m_saveDataManager.GetSaveData().saveData.isGet[i])
+            if (m_saveDataManager.GetSaveData().saveData.GetNum[i] == 0)
             {
                 // テキストを表示
                 NewText.SetActive(true);
