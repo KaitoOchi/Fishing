@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u304A\u304A\u304D\u3055\u3000\u3000200\u30BB\u30F3\u30C1"
+  m_text: "\u5927\u304D\u3055\u3000\u3000200\u30BB\u30F3\u30C1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
   m_sharedMaterial: {fileID: -4053309930299710118, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 358393597}
   - component: {fileID: 358393596}
   - component: {fileID: 358393595}
+  - component: {fileID: 358393598}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -411,13 +412,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 358393593}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 358393598}
+        m_TargetAssemblyTypeName: OKButton, Assembly-CSharp
+        m_MethodName: ChangeActiveFlag
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -461,6 +462,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358393593}
   m_CullTransparentMesh: 1
+--- !u!114 &358393598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358393593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1ac3ad13090c542ae3e26b1995d9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Result: {fileID: 598360398}
 --- !u!1 &598360398
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,8 +487,9 @@ GameObject:
   - component: {fileID: 598360401}
   - component: {fileID: 598360400}
   - component: {fileID: 598360399}
+  - component: {fileID: 598360403}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ResultCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,6 +581,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &598360403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598360398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f155266be70ba4c9c3a2da5a1735bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishName: "\u30DE\u30B0\u30ED"
+  FishSize: 120.5
+  FishMoney: 5000
+  FishNameText: {fileID: 1570798998}
+  SizeText: {fileID: 16100135}
+  GetMoneyText: {fileID: 643473871}
+  NewText: {fileID: 1656863561}
+  HighScoreText: {fileID: 1049093385}
 --- !u!1 &643473869
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,7 +847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1049093386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1167,7 +1202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1656863562
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1185,7 +1220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72, y: 9.7932}
+  m_AnchoredPosition: {x: -69, y: 9.7932}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656863563
@@ -1271,7 +1306,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 140.24475, w: 0}
+  m_margin: {x: 0, y: 7.672241, z: 140.24475, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
