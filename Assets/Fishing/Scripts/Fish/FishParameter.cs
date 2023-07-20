@@ -41,7 +41,10 @@ public class FishParameter : ScriptableObject
     float SizeMax = 0.0f;
 
     [SerializeField, Header("“üè‹àŠz")]
-    int money = 0;
+    int Money = 0;
+
+    [SerializeField, Header("‘Ï‹v’l")]
+    int Health = 0;
 
 
     /// <summary>
@@ -132,6 +135,15 @@ public class FishParameter : ScriptableObject
     /// <returns></returns>
     public int GetMoney()
     {
-        return money;
+        return Money;
+    }
+
+    /// <summary>
+    /// ‘Ï‹v’l‚ğæ“¾B
+    /// </summary>
+    /// <returns></returns>
+    public int GetHealth()
+    {
+        return Health;
     }
 }

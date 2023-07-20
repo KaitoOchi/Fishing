@@ -9,7 +9,7 @@ public class PlayerFishing : MonoBehaviour
     [SerializeField, Header("ƒJƒƒ‰")]
     GameObject GameCamera;
     [SerializeField, Header("Šî‘b—Í")]
-    float DefaultPower = 5.0f;
+    float DefaultPower = 50.0f;
 
     public GameObject testCube;
 
