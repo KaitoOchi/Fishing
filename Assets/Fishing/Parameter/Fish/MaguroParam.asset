@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: MaguroParam
   m_EditorClassIdentifier: 
   InternalNum: 0
-  Name: "\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042"
+  Name: "\u30AF\u30ED\u30DE\u30B0\u30ED"
   Model: {fileID: 1925539161038096126, guid: 8f0e34ed384f82644b755baaaa5897da, type: 3}
   ExplainSprite: {fileID: 21300000, guid: 9c21d1c9797cd1f4a8e4bd6a6d6d6b31, type: 3}
-  ExplainString: "\u30DE\u30B0\u30ED\u3001\u64AE\u5F71\u958B\u59CB"
+  ExplainString: "\u30B9\u30BA\u30AD\u76EE\u30B5\u30D0\u79D1\u306B\u5206\u985E\u3055\u308C\u308B\u6D77\u6C34\u9B5A\u3002\u30DE\u30B0\u30ED\u3001\u64AE\u5F71\u958B\u59CB\u3002"
   FishType: 0
   Rank: 2
   SizeMin: 10
   SizeMax: 200
+  Money: 2000
+  Health: 100

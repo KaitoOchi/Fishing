@@ -25,13 +25,6 @@ public class DrawFishParam : MonoBehaviour
     int                 m_money;              // ’Ç‰Á‚Ì‹àŠz
     int                 m_number;             // ¯•Ê”Ô†
 
-    // ”Ô†‚ğİ’è
-    public void SetNumber(int num)
-    {
-        m_number = num;
-    }
-
-
     // ‹àŠz‚ğQÆ‚·‚é
     public int GetMoney()
     {
@@ -41,6 +34,9 @@ public class DrawFishParam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // ”Ô†‚ğQÆ‚·‚é
+        m_number = GetComponent<DrawFishHP>().GetNumber();
+
         m_saveDataManager = FindObjectOfType<SaveDataManager>();
 
         string path = "Assets/Fishing/Parameter/FishList.asset";
@@ -75,6 +71,7 @@ public class DrawFishParam : MonoBehaviour
             SizeText.text = ("‘å‚«‚³     " + rand.ToString() + "ƒZƒ“ƒ`");
             // Šl“¾‹àŠz
             GetMoneyText.text = ("“üè‹àŠz      " + m_fishParamList[i].GetMoney());
+            m_money = m_fishParamList[i].GetMoney();
             // ƒ‚ƒfƒ‹
             GameObject FishModel = Instantiate(m_fishParamList[i].GetModel(), Position.transform.position, Quaternion.identity);
             FishModel.transform.localScale = new Vector3(50.0f, 50.0f, 50.0f);
