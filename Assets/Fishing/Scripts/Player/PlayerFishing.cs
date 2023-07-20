@@ -76,7 +76,7 @@ public class PlayerFishing : MonoBehaviour
                 StickFloat.transform.position = Vector3.Lerp(m_lerpPos[0], m_lerpPos[1], m_timer);
 
                 //ƒJƒƒ‰‚ğˆÚ“®B
-                GameCamera.transform.position = Vector3.Lerp(m_cameraPos, m_fishingPos, m_timer);
+                GameCamera.transform.position = Vector3.Lerp(m_cameraPos[1], m_fishingPos, m_timer);
 
                 m_timer += Time.deltaTime * 2.0f;
                 break;
