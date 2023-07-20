@@ -39,7 +39,7 @@ public class PictureBook : MonoBehaviour
                 prefab.GetComponent<PictureBookButton>().SetNumber(i);
 
                 //ñ¢î≠å©Ç»ÇÁï\é¶ÇµÇ»Ç¢ÅB
-                if(saveManager.GetSaveData().saveData.isGet[i] == false)
+                if(saveManager.GetSaveData().saveData.GetNum[i] == 0)
                 {
                     prefab.GetComponent<PictureBookButton>().SetDiscover();
                     prefab.GetComponent<Image>().sprite = DiscoverImage;

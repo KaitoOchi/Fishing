@@ -190,4 +190,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1874fc80252c694587deb38e272e9fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChargeSpeed: 1
+  ChargeSpeed: 10

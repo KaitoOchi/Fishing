@@ -60,7 +60,7 @@ public class PlayerMove : MonoBehaviour
         //釣りステートに遷移。
         m_playerState = PlayerState.enState_Fishing;
 
-        m_playerFishing.StartFishing(gauge);
+        m_playerFishing.StartFishing(gauge, transform.position);
     }
 
     /// <summary>

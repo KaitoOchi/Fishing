@@ -65,7 +65,7 @@ public class SaveDataManager : MonoBehaviour
     {
         //セーブデータ分のメモリを確保。
         NowSaveData.saveData.feed = new int[FeedNum];
-        NowSaveData.saveData.isGet= new bool[FishNum];
+        NowSaveData.saveData.GetNum= new int[FishNum];
         NowSaveData.saveData.maxSize = new float[FishNum];
 
         NowSaveData.saveData.money = 0;
@@ -78,7 +78,7 @@ public class SaveDataManager : MonoBehaviour
 
         for(int i = 0; i < FishNum; i++)
         {
-            NowSaveData.saveData.isGet[i] = false;
+            NowSaveData.saveData.GetNum[i] = 0;
             NowSaveData.saveData.maxSize[i] = 0.0f;
         }
 
