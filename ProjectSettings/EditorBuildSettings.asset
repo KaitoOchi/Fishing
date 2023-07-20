@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Fishing/Scenes/Title.unity
     guid: bc0c6badef206b64a801f21f0187de79
   - enabled: 1
+    path: Assets/Fishing/Scenes/MainMenu.unity
+    guid: bd599e7ac29a54548acf96bfddc76d34
+  - enabled: 1
     path: Assets/Fishing/Scenes/Game.unity
     guid: a6b1698fef9435844b6f73c1a4735018
   - enabled: 1
-    path: Assets/Fishing/Scenes/PicktureBook.unity
+    path: Assets/Fishing/Scenes/PictureBook.unity
     guid: 27e40f6e827e79841a98191fd4eb2f1c
+  - enabled: 1
+    path: Assets/Fishing/Scenes/Shop.unity
+    guid: 30e1b17d15590c94e9b23f2e9a06b09d
   m_configObjects: {}

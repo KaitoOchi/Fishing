@@ -500,7 +500,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Game
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &424091967
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
-  m_sharedMaterial: {fileID: -3671984882852063142, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
+  m_sharedMaterial: {fileID: -4053309930299710118, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -750,7 +750,7 @@ MonoBehaviour:
   m_text: "\u30E1\u30CB\u30E5\u30FC\u306B\u623B\u308B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
-  m_sharedMaterial: {fileID: -3671984882852063142, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
+  m_sharedMaterial: {fileID: -4053309930299710118, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
-  m_sharedMaterial: {fileID: -3671984882852063142, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
+  m_sharedMaterial: {fileID: -4053309930299710118, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1787,7 +1787,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
-  m_sharedMaterial: {fileID: -3671984882852063142, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
+  m_sharedMaterial: {fileID: -4053309930299710118, guid: ab9d647051209dd448f987ec8d1e296d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

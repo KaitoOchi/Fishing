@@ -20,10 +20,10 @@ public class BuyGoods : MonoBehaviour
     {
         // Œ»İ‚Ì‹àŠz‚ğQÆ
         m_saveManager = FindObjectOfType<SaveDataManager>();
-        //m_haveMoney = m_saveManager.GetSaveData().saveData.money;
+        m_haveMoney = m_saveManager.GetSaveData().saveData.money;
 
         // ƒfƒoƒbƒO—p
-        m_haveMoney = 1000;
+        //m_haveMoney = 1000;
 
         HaveMoneyText.text = " " + m_haveMoney;
         BuyText.text = "w“ü ( " + Money + ")";
@@ -39,7 +39,7 @@ public class BuyGoods : MonoBehaviour
 
     private void Update()
     {
-        //m_haveMoney = m_saveManager.GetSaveData().saveData.money;
+        m_haveMoney = m_saveManager.GetSaveData().saveData.money;
 
         // ‹àŠz‚ª 0 ˆÈ‰º‚È‚ç’†’f
         if (m_haveMoney <= 0 || m_haveMoney < Money)
@@ -52,7 +52,8 @@ public class BuyGoods : MonoBehaviour
     // Start is called before the first frame update
     public void Buy()
     {
-        m_haveMoney -= Money;
+
+        m_saveManager.GetSaveData().saveData.money -= Money;
         HaveMoneyText.text = " " + m_haveMoney;
     }
 }
