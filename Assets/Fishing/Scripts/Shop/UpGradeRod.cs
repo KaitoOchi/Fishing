@@ -46,7 +46,8 @@ public class UpGradeRod : MonoBehaviour
     public void UpGrade()
     {
         // グレードを上げる
-        m_saveDataManager.GetSaveData().saveData.rodPower = RodGrade++;
+        RodGrade++;
+        m_saveDataManager.GetSaveData().saveData.rodPower = RodGrade;
 
         // デバッグ用
         //Debug.Log(m_saveDataManager.GetSaveData().saveData.rodPower);
