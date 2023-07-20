@@ -74,7 +74,7 @@ public class DrawFishParam : MonoBehaviour
             // サイズ
             SizeText.text = ("大きさ     " + rand.ToString() + "センチ");
             // 獲得金額
-            GetMoneyText.text = ("入手金額     ￥ ");
+            GetMoneyText.text = ("入手金額     ￥ " + m_fishParamList[i].GetMoney());
             // モデル
             GameObject FishModel = Instantiate(m_fishParamList[i].GetModel(), Position.transform.position, Quaternion.identity);
             FishModel.transform.localScale = new Vector3(50.0f, 50.0f, 50.0f);
