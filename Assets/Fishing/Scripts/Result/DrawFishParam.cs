@@ -44,11 +44,7 @@ public class DrawFishParam : MonoBehaviour
 
         m_saveDataManager = FindObjectOfType<SaveDataManager>();
 
-        string path = "Assets/Fishing/Parameter/FishList.asset";
-        ScriptableObject obj = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path);
-
-        //おさかなリストを取得。
-        FishParamList fishList = obj as FishParamList;
+        ResourceFishList fishList = FindObjectOfType<ResourceFishList>();
         m_fishParamList = fishList.GetFishList();
 
         // リスト分回す

@@ -11,5 +11,9 @@ public class GameManager : MonoBehaviour
         // セーブオブジェクトを生成
         GameObject saveObject = (GameObject)Resources.Load("SaveObject");
         Instantiate(saveObject);
+
+        // セーブオブジェクトを生成
+        GameObject fishListObject = (GameObject)Resources.Load("ResourceFishList");
+        Instantiate(fishListObject);
     }
 }

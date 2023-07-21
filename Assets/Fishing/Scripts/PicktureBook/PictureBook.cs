@@ -18,44 +18,38 @@ public class PictureBook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string path = "Assets/Fishing/Parameter/FishList.asset";
-        ScriptableObject obj = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path);
+        ResourceFishList fishList = FindObjectOfType<ResourceFishList>();
+        m_fishParamList = fishList.GetFishList();
 
-        if (obj != null)
+        Debug.Log("A");
+
+        //セーブデータを取得。
+        SaveDataManager saveManager = FindObjectOfType<SaveDataManager>();
+
+        int size = m_fishParamList.Count;
+
+        Debug.Log("B");
+
+        for (int i = 0; i < size; i++)
         {
-            //セーブデータを取得。
-            SaveDataManager saveManager = FindObjectOfType<SaveDataManager>();
+            //ボタンを生成。
+            GameObject prefab = Instantiate(ButtonPrefab, Vector3.zero, Quaternion.identity, Content.transform);
+            prefab.GetComponent<PictureBookButton>().SetNumber(i);
 
-            //おさかなリストを取得。
-            FishParamList fishList = obj as FishParamList;
-            m_fishParamList = fishList.GetFishList();
+            Debug.Log("C");
 
-            int size = m_fishParamList.Count;
-
-            for (int i = 0; i < size; i++)
+            //未発見なら表示しない。
+            if (saveManager.GetSaveData().saveData.GetNum[i] == 0)
             {
-                //ボタンを生成。
-                GameObject prefab = Instantiate(ButtonPrefab, Vector3.zero, Quaternion.identity, Content.transform);
-                prefab.GetComponent<PictureBookButton>().SetNumber(i);
-
-                //未発見なら表示しない。
-                if(saveManager.GetSaveData().saveData.GetNum[i] == 0)
-                {
-                    prefab.GetComponent<PictureBookButton>().SetDiscover();
-                    prefab.GetComponent<Image>().sprite = DiscoverImage;
-                }
-                //発見済みなら。
-                else
-                {
-                    prefab.GetComponent<PictureBookButton>().SetNumber(i);
-                    prefab.GetComponent<Image>().sprite = m_fishParamList[i].GetSprite();
-                }
+                prefab.GetComponent<PictureBookButton>().SetDiscover();
+                prefab.GetComponent<Image>().sprite = DiscoverImage;
             }
-        }
-        else
-        {
-            // ScriptableObjectの取得失敗
-            Debug.Log("ScriptableObjectの取得に失敗しました");
+            //発見済みなら。
+            else
+            {
+                prefab.GetComponent<PictureBookButton>().SetNumber(i);
+                prefab.GetComponent<Image>().sprite = m_fishParamList[i].GetSprite();
+            }
         }
     }
 

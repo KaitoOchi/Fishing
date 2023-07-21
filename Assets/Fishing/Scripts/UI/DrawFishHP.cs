@@ -73,12 +73,7 @@ public class DrawFishHP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        string path = "Assets/Fishing/Parameter/FishList.asset";
-        ScriptableObject obj = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path);
-
-        //‚¨‚³‚©‚ÈƒŠƒXƒg‚ğæ“¾B
-        FishParamList fishList = obj as FishParamList;
+        ResourceFishList fishList = FindObjectOfType<ResourceFishList>();
         m_fishParamList = fishList.GetFishList();
 
         int fishCount = m_fishParamList.Count;
