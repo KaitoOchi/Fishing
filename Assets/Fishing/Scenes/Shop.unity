@@ -1645,7 +1645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453a8fc3785e4d41b6786a88d83b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 500
+  Money: 10000
   HaveMoneyText: {fileID: 1749422144}
   BuyText: {fileID: 906475228}
 --- !u!114 &899157363
@@ -2326,7 +2326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453a8fc3785e4d41b6786a88d83b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 150
+  Money: 5000
   HaveMoneyText: {fileID: 1749422144}
   BuyText: {fileID: 1304013811}
 --- !u!114 &943666260
@@ -2828,7 +2828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453a8fc3785e4d41b6786a88d83b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 100
+  Money: 500
   HaveMoneyText: {fileID: 1749422144}
   BuyText: {fileID: 430514440}
 --- !u!114 &1183016099

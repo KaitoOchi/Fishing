@@ -206,6 +206,10 @@ public class PlayerMove : MonoBehaviour
                 return;
             }
 
+            SaveDataManager saveManager = FindObjectOfType<SaveDataManager>();
+            m_feedNum[m_feed]--;
+            saveManager.GetSaveData().saveData.feed[m_feed] = m_feedNum[m_feed];
+
             //釣りステートへ遷移。
             m_playerState = PlayerState.enState_Fishing;
 

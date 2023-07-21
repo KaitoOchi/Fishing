@@ -8,8 +8,8 @@ public class DrawPlayerStamina : MonoBehaviour
 {
     [SerializeField, Header("現在のスタミナ")]
     int Stamina;
-    const int STAMINA_MIN = 0;      // スタミナ最小値
-    const int STAMINA_MAX = 100;    // スタミナ最大値
+    int STAMINA_MIN = 0;      // スタミナ最小値
+    int STAMINA_MAX = 100;    // スタミナ最大値
 
     [SerializeField, Header("スタミナのテキスト")]
     TextMeshProUGUI StaminaText;
@@ -43,6 +43,10 @@ public class DrawPlayerStamina : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SaveDataManager saveDataManager = FindObjectOfType<SaveDataManager>();
+
+        STAMINA_MAX = (saveDataManager.GetSaveData().saveData.rodPower * 50) + 100;
+
         // テキストを設定
         StaminaText.text = (Stamina + " / " + STAMINA_MAX);
 
