@@ -16,6 +16,7 @@ public class ResourceFishList : MonoBehaviour
         return m_fishList;
     }
 
+#if UNITY_EDITOR
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class ResourceFishList : MonoBehaviour
         FishParamList fishList = obj as FishParamList;
         m_fishList = fishList.GetFishList();
     }
+#endif
 
     private void Awake()
     {

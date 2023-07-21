@@ -8,7 +8,6 @@ public class DrawPlayerStamina : MonoBehaviour
 {
     [SerializeField, Header("現在のスタミナ")]
     int Stamina;
-    int STAMINA_MIN = 0;      // スタミナ最小値
     int STAMINA_MAX = 100;    // スタミナ最大値
 
     [SerializeField, Header("スタミナのテキスト")]

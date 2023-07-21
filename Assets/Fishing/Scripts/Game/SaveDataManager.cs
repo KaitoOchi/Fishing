@@ -68,15 +68,16 @@ public class SaveDataManager : MonoBehaviour
         NowSaveData.saveData.GetNum= new int[FishNum];
         NowSaveData.saveData.maxSize = new float[FishNum];
 
-        NowSaveData.saveData.money = 0;
+        NowSaveData.saveData.money = 500;
         NowSaveData.saveData.rodPower = 0;
 
         for(int i = 0; i < FeedNum; i++)
         {
             NowSaveData.saveData.feed[i] = 0;
         }
+        NowSaveData.saveData.feed[0] = 10;
 
-        for(int i = 0; i < FishNum; i++)
+        for (int i = 0; i < FishNum; i++)
         {
             NowSaveData.saveData.GetNum[i] = 0;
             NowSaveData.saveData.maxSize[i] = 0.0f;

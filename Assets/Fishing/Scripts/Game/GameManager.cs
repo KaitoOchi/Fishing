@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // どのシーンから開始しても最初に呼ばれる関数
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    static void Init()
-    {
-        // セーブオブジェクトを生成
-        GameObject saveObject = (GameObject)Resources.Load("SaveObject");
-        Instantiate(saveObject);
+    [SerializeField, Header("SaveObject")]
+    GameObject SaveDataObject;
+    [SerializeField, Header("ResourceFishList")]
+    GameObject ResourceFishList;
 
-        // セーブオブジェクトを生成
-        GameObject fishListObject = (GameObject)Resources.Load("ResourceFishList");
-        Instantiate(fishListObject);
+    void Awake()
+    {
+        //自身はシーンをまたいでも削除されないようにする
+        DontDestroyOnLoad(gameObject);
+
+        Instantiate(SaveDataObject);
+        Instantiate(ResourceFishList);
     }
 }
