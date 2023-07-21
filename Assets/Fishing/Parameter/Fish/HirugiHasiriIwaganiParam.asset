@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: HirugiHasiriIwaganiParam
+  m_EditorClassIdentifier: 
+  InternalNum: 14
+  Name: "\u30D2\u30EB\u30AE\u30CF\u30B7\u30EA\u30A4\u30EF\u30AC\u30CB"
+  Model: {fileID: 2549404751070300360, guid: 0dd8519f5fee0f144ba1eed4daf6c621, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: d4d23ee80222b1147ae407167bbb8552, type: 3}
+  ExplainString: "\u30DE\u30F3\u30B0\u30ED\u30FC\u30D6\u306E\u6839\u5143\u3084\u6697\u6E20\u306E\u8FD1\u304F\u3067\u898B\u304B\u3051\u308B\u3002"
+  FishType: 0
+  Rank: 1
+  SizeMin: 2
+  SizeMax: 3
+  Money: 0
+  Health: 0

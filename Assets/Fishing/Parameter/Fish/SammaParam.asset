@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: SammaParam
+  m_EditorClassIdentifier: 
+  InternalNum: 41
+  Name: "\u30B5\u30F3\u30DE"
+  Model: {fileID: 8882300217574211055, guid: 27b08fad07b8f5f49bcbaede1c66af78, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 1d371d0d412079d429ba192f061ff59e, type: 3}
+  ExplainString: "\u5317\u592A\u5E73\u6D0B\u306B\u5E83\u304F\u751F\u606F\u3057\u3001\u65E5\u672C\u6D77\u3092\u542B\u3080\u65E5\u672C\u8FD1\u6D77\u304B\u3089\u3001\u30A2\u30E1\u30EA\u30AB\u5927\u9678\u6CBF\u5CB8\u306E\u30A2\u30E9\u30B9\u30AB\u304A\u3088\u3073\u30E1\u30AD\u30B7\u30B3\u307E\u3067\u306E\u6D77\u57DF\u306B\u5206\u5E03\u3059\u308B\u3002"
+  FishType: 1
+  Rank: 1
+  SizeMin: 35
+  SizeMax: 40
+  Money: 950
+  Health: 45

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: GoisiumadurahagiParam
+  m_EditorClassIdentifier: 
+  InternalNum: 9
+  Name: "\u30B4\u30A4\u30B7\u30DE\u30A6\u30C4\u30E9\u30CF\u30AE"
+  Model: {fileID: 6225468483991408662, guid: dd8118224322706469cde5c4213dd88d, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 03d4551596eec2f4aaa5cba4e5c5a15b, type: 3}
+  ExplainString: "\u76F8\u6A21\u6E7E\u3001\u99FF\u6CB3\u6E7E\u3001\u7D00\u4F0A\u534A\u5CF6\u3001\u571F\u4F50\u6E7E\u3001\u9E7F\u5150\u5CF6\u770C\u8FD1\u6D77\u3001\u6771\u30B7\u30CA\u6D77\u3002\uFF5E\u897F\u592A\u5E73\u6D0B\u3001\u30AA\u30FC\u30B9\u30C8\u30E9\u30EA\u30A2\u5317\u5CB8\u3001\u30CB\u30E5\u30FC\u30AB\u30EC\u30C9\u30CB\u30A2\u306B\u751F\u606F\u3002\u6CBF\u5CB8\u306E\u3084\u3084\u6DF1\u3044\u7802\u30FB\u6CE5\u5E95\u306B\u751F\u606F\u3059\u308B\u3002"
+  FishType: 1
+  Rank: 1
+  SizeMin: 15
+  SizeMax: 22
+  Money: 600
+  Health: 40

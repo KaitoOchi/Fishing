@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: HimemasuParam
+  m_EditorClassIdentifier: 
+  InternalNum: 13
+  Name: "\u30D2\u30E1\u30DE\u30B9"
+  Model: {fileID: 7090507951438381566, guid: e39829f9a7622484899c29c24b8a8b4a, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 4ba26ef898391df4b811d7d849cbfaf3, type: 3}
+  ExplainString: "\u81EA\u7136\u5206\u5E03\u306F\u30A2\u30E1\u30EA\u30AB\u5408\u8846\u56FD\u3001\u30AB\u30CA\u30C0\u3001\u30AB\u30E0\u30C1\u30E3\u30C4\u30AB\u534A\u5CF6\u3001\u5317\u6D77\u9053\u306E\u963F\u5BD2\u6E56\u3068\u30C1\u30DF\u30B1\u30C3\u30D7\u6E56\u3002\u30CB\u30E5\u30FC\u30B8\u30FC\u30E9\u30F3\u30C9\u306B\u306F\u3001\u79FB\u690D\u306B\u3088\u308A\u5B9A\u7740\u3057\u305F\u3002"
+  FishType: 1
+  Rank: 2
+  SizeMin: 30
+  SizeMax: 50
+  Money: 700
+  Health: 55

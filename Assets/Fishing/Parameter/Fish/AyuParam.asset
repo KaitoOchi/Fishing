@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: AyuParam
+  m_EditorClassIdentifier: 
+  InternalNum: 4
+  Name: "\u30A2\u30E6"
+  Model: {fileID: 4687604996411550454, guid: f30ef4df9374ffb4ea934361cd244e38, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 8bea45e518433444a850c6a4a38355b5, type: 3}
+  ExplainString: "\u5DDD\u3084\u6D77\u306A\u3069\u3092\u56DE\u904A\u3059\u308B\u9B5A\u3002\u300C\u6E05\u6D41\u306E\u5973\u738B\u300D\u3068\u3082\u547C\u3070\u308C\u3066\u3044\u308B\u3002\u6210\u9B5A\u306E\u5168\u9577\u306F30\u30BB\u30F3\u30C1\u30E1\u30FC\u30C8\u30EB\u306B\u9054\u3059\u308B\u304C\u3001\u5730\u57DF\u5DEE\u3084\u500B\u4F53\u5DEE\u304C\u3042\u308A\u300110\u30BB\u30F3\u30C1\u30E1\u30FC\u30C8\u30EB\u307B\u3069\u3067\u6027\u6210\u719F\u3059\u308B\u3082\u306E\u3082\u3044\u308B\u3002"
+  FishType: 0
+  Rank: 1
+  SizeMin: 10
+  SizeMax: 30
+  Money: 650
+  Health: 30

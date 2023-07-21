@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: KobanzameParam
+  m_EditorClassIdentifier: 
+  InternalNum: 24
+  Name: "\u30B3\u30D0\u30F3\u30B6\u30E1"
+  Model: {fileID: 3235003522032553818, guid: 8cd08c1d314c55042961d419b9d222d2, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 78a002ed74ee8ed429a4211a122b8fe5, type: 3}
+  ExplainString: "\u751F\u606F\u6DF1\u5EA6\u306F20-50 m\u3002\u5927\u578B\u306E\u6D77\u6D0B\u751F\u7269\u30FB\u8239\u306A\u3069\u306B\u4ED8\u7740\u3057\u3066\u751F\u6D3B\u3059\u308B\u304C\u3001\u30B5\u30F3\u30B4\u7901\u306E\u6CBF\u5CB8\u3067\u306F\u5358\u72EC\u3067\u898B\u3089\u308C\u308B\u3053\u3068\u3082\u591A\u3044\u3002"
+  FishType: 1
+  Rank: 2
+  SizeMin: 70
+  SizeMax: 110
+  Money: 1200
+  Health: 80

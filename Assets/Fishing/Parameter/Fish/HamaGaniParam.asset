@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: HamaGaniParam
+  m_EditorClassIdentifier: 
+  InternalNum: 10
+  Name: "\u30CF\u30DE\u30AC\u30CB"
+  Model: {fileID: 1170040586310401478, guid: dca5c725bc300a24ca812b2be1257249, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: e386a39bda753574ba95b4f7de1d7aca, type: 3}
+  ExplainString: "\u3002\u6771\u30A2\u30B8\u30A2\u71B1\u5E2F\u30FB\u4E9C\u71B1\u5E2F\u57DF\u306E\u5869\u6CBC\u3084\u30DE\u30F3\u30B0\u30ED\u30FC\u30D6\u5468\u8FBA\u3067\u898B\u3089\u308C\u308B\u3084\u3084\u5927\u578B\u306E\u30AB\u30CB\u3002\u65E5\u672C\u3067\u306F\u4E3B\u306B\u897F\u65E5\u672C\u3067\u898B\u3089\u308C\u308B\u3002"
+  FishType: 0
+  Rank: 1
+  SizeMin: 35
+  SizeMax: 50
+  Money: 430
+  Health: 35

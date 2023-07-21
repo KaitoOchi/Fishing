@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: SuzukiParam
+  m_EditorClassIdentifier: 
+  InternalNum: 43
+  Name: "\u30B9\u30BA\u30AD"
+  Model: {fileID: 8806154768440929840, guid: 4c57bc424dc876a4d92949b6d2a197ff, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 3a938f3f5f5aa3d469f6d57a1ec9a839, type: 3}
+  ExplainString: "\u5317\u6D77\u9053\u5357\u90E8\u304B\u3089\u4E5D\u5DDE\u307E\u3067\u306E\u65E5\u672C\u5217\u5CF6\u6CBF\u5CB8\u3068\u3001\u671D\u9BAE\u534A\u5CF6\u6771\u30FB\u5357\u90E8\u3001\u6CBF\u6D77\u5DDE\u306B\u5206\u5E03\u3059\u308B\u3002"
+  FishType: 1
+  Rank: 1
+  SizeMin: 40
+  SizeMax: 100
+  Money: 750
+  Health: 60

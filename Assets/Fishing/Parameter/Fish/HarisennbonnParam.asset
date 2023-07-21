@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: HarisennbonnParam
+  m_EditorClassIdentifier: 
+  InternalNum: 12
+  Name: "\u30CF\u30EA\u30BB\u30F3\u30DC\u30F3"
+  Model: {fileID: 6242382210068814471, guid: 956c4ed674c207c4d982e38a5649607e, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 6e061816b0453034fa93f8d3fde5e0d2, type: 3}
+  ExplainString: "\u6D45\u3044\u6D77\u306E\u5CA9\u7901\u3001\u30B5\u30F3\u30B4\u7901\u3001\u7802\u5E95\u306B\u751F\u606F\u3059\u308B\u3002\u4ED6\u306E\u30D5\u30B0\u76EE\u306E\u9B5A\u3068\u540C\u69D8\u306B\u80F8\u3073\u308C\u3001\u5C3B\u3073\u308C\u3001\u80CC\u3073\u308C\u3092\u30D1\u30BF\u30D1\u30BF\u3068\u7FBD\u3070\u305F\u304B\u305B\u306A\u304C\u3089\u3086\u3063\u304F\u308A\u3068\u6CF3\u3050\u3002"
+  FishType: 1
+  Rank: 1
+  SizeMin: 15
+  SizeMax: 70
+  Money: 650
+  Health: 40

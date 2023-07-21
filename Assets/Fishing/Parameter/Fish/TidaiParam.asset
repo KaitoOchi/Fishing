@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: TidaiParam
+  m_EditorClassIdentifier: 
+  InternalNum: 45
+  Name: "\u30C1\u30C0\u30A4"
+  Model: {fileID: 103991750045477180, guid: 8f89b59e0bb965f449f0ad19000a6efa, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 0975fc00d9dde0c4db3d4cd46725db76, type: 3}
+  ExplainString: "\u5317\u6D77\u9053\u5357\u90E8\u304B\u3089\u4E5D\u5DDE\u307E\u3067\u5E83\u304F\u5206\u5E03\u3059\u308B\u304C\u3001\u7409\u7403\u5217\u5CF6\u306B\u306F\u3044\u306A\u3044\u3002\u4F53\u8272\u304C\u30DE\u30C0\u30A4\u3088\u308A\u9BAE\u3084\u304B\u306A\u306E\u3067\u3001\u95A2\u6771\u3067\u306F\u30CF\u30CA\u30C0\u30A4\u3068\u547C\u3076\u3002\u6C34\u6DF130m\uFF5E80m\u306E\u7802\u5E95\u3084\u7802\u792B\u5E95\u306B\u591A\u3044\u3002"
+  FishType: 1
+  Rank: 1
+  SizeMin: 30
+  SizeMax: 45
+  Money: 700
+  Health: 60

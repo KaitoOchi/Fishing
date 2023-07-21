@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: ZuwaiganiParam
+  m_EditorClassIdentifier: 
+  InternalNum: 48
+  Name: "\u30BA\u30EF\u30A4\u30AC\u30CB"
+  Model: {fileID: 3432675600957069695, guid: e438b9a65083b7a42bf6582d82241822, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: d0df386eff717bf4eb108b3b124d6253, type: 3}
+  ExplainString: "\u65E5\u672C\u306E\u5C71\u53E3\u770C\u4EE5\u6771\u306E\u65E5\u672C\u6D77\u3068\u8328\u57CE\u770C\u4EE5\u6771\u304B\u3089\u30AB\u30CA\u30C0\u307E\u3067\u306E\u5317\u592A\u5E73\u6D0B\u3001\u30AA\u30DB\u30FC\u30C4\u30AF\u6D77\u3001\u30D9\u30FC\u30EA\u30F3\u30B0\u6D77\u306B\u5E83\u304F\u5206\u5E03\u3059\u308B\u3002\u6C34\u6DF150
+    - 1,200m\u306E\u7802\u6CE5\u5E95\u306B\u751F\u606F\u3057\u3001\u6C34\u6DF1200
+    - 600m\u306E\u6DF1\u6D77\u3068\u6C34\u6E290 - 3\u2103\u306E\u6C34\u57DF\u3092\u597D\u3080\u3002"
+  FishType: 1
+  Rank: 2
+  SizeMin: 20
+  SizeMax: 50
+  Money: 800
+  Health: 72

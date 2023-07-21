@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: IidakoParam
+  m_EditorClassIdentifier: 
+  InternalNum: 16
+  Name: "\u30A4\u30A4\u30C0\u30B3"
+  Model: {fileID: 2557435604431976496, guid: 0de73fe9b93eda746821d139164f6d85, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: c4ce9837f82a050449ccde70dcb68a40, type: 3}
+  ExplainString: "\u5317\u6D77\u9053\u5357\u90E8\u4EE5\u5357\u306E\u65E5\u672C\u6CBF\u5CB8\u57DF\u304B\u3089\u671D\u9BAE\u534A\u5CF6\u5357\u90E8\u3001\u9EC4\u6D77\u3001\u304A\u3088\u3073\u3001\u4E2D\u56FD\u306E\u6CBF\u5CB8\u57DF\u306B\u81F3\u308B\u3001\u6771\u30A2\u30B8\u30A2\u306E\u6D45\u6D77\u306B\u5206\u5E03\u3059\u308B\u3002\u6CE2\u6253\u3061\u969B\u304B\u3089\u6C34\u6DF110m\u307B\u3069\u307E\u3067\u306E\u3001\u5CA9\u7901\u3084\u8EE2\u77F3\u304C\u70B9\u5728\u3059\u308B\u7802\u6CE5\u5E95\u306B\u751F\u606F\u3002"
+  FishType: 1
+  Rank: 2
+  SizeMin: 15
+  SizeMax: 30
+  Money: 850
+  Health: 70

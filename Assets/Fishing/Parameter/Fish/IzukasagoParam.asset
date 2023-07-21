@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d0e3495e9e06c44980bf494744c384, type: 3}
+  m_Name: IzukasagoParam
+  m_EditorClassIdentifier: 
+  InternalNum: 19
+  Name: "\u30A4\u30BA\u30AB\u30B5\u30B4"
+  Model: {fileID: 4538023730224836746, guid: 3b6f47a7b1d583f43950ac2309a400f0, type: 3}
+  ExplainSprite: {fileID: 21300000, guid: 7ddd1d7bd7d9d3d45ba58e9394860b19, type: 3}
+  ExplainString: "\u672C\u5DDE\u4E2D\u90E8\u4EE5\u5357\u3001\u6771\u30B7\u30CA\u6D77\u3001\u30D5\u30A3\u30EA\u30D4\u30F3\u306B\u5206\u5E03\u3002\u6C34\u6DF1\uFF11\uFF10\uFF10\uFF5E\uFF11\uFF15\uFF10\uFF4D\u306E\u7802\u6CE5\u5E95\u306B\u591A\u3044\u3002\u6C34\u6DF1100\uFF0D200m\u306E\u7802\u5E95\u57DF\u3001\u5CA9\u7901\u57DF\u306B\u751F\u606F\u3059\u308B\u3053\u3068\u304C\u591A\u3044\u3002"
+  FishType: 1
+  Rank: 2
+  SizeMin: 15
+  SizeMax: 30
+  Money: 750
+  Health: 55
