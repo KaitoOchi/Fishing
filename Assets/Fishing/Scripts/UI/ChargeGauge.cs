@@ -11,6 +11,7 @@ public class ChargeGauge : MonoBehaviour
     Image       m_image;                //画像。
     PlayerMove  m_playerMove;           //PlayerMove。
     bool        m_isReverse = false;    //反転するかどうか。
+    bool        m_isStop = false;       //停止状態か。
     float       m_gauge = 0.01f;        //ゲージ。
 
     /// <summary>
@@ -25,12 +26,17 @@ public class ChargeGauge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_image = transform.GetChild(0).GetComponent<Image>();
+        m_image = transform.GetChild(1).GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(m_isStop)
+        {
+            return;
+        }
+
         if(m_isReverse)
         {
             m_gauge -= Time.deltaTime * ChargeSpeed * m_gauge;
@@ -39,8 +45,6 @@ public class ChargeGauge : MonoBehaviour
         {
             m_gauge += Time.deltaTime * ChargeSpeed * m_gauge;
         }
-
-        Debug.Log(m_gauge);
 
         //一定範囲を超えたら。
         if (m_gauge < 0.01f || m_gauge > 1.0f)
@@ -59,7 +63,15 @@ public class ChargeGauge : MonoBehaviour
             //gaugeを1.0～2.0の間にする。
             m_playerMove.NotifyStartFishing(m_gauge + 1.0f);
 
-            Destroy(gameObject);
+            //一定時間後に削除する。
+            Invoke("DeleteThisObject", 1.75f);
+
+            m_isStop = true;
         }
+    }
+
+    void DeleteThisObject()
+    {
+        Destroy(gameObject);
     }
 }

@@ -10,9 +10,12 @@ public class SceneButton : MonoBehaviour
     [SerializeField, Header("フェード")]
     GameObject FadeCanvas;
 
+    AudioSource m_audio;
+
+
     private void Start()
     {
-
+        m_audio = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -21,6 +24,8 @@ public class SceneButton : MonoBehaviour
     /// <param name="sceneName"></param>
     public void SceneChange(string sceneName)
     {
+        m_audio.Play();
+
         //名前が空白なら、現在のシーンの名前を使う
         if (sceneName == "")
         {

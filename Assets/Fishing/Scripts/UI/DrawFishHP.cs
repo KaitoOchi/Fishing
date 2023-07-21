@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEditor;
 using TMPro;
 
@@ -12,13 +13,15 @@ public class DrawFishHP : MonoBehaviour
     TextMeshProUGUI     HPText;
 
     int                 m_number;             // 識別番号
-
+    int                 m_power = 0;            //攻撃力。
+    int                 m_feed = 0;
     int                 m_healthMax;         // 最大値
     const int           HEALTH_MIN = 0;      // 最小値
 
-    bool                m_canFising = false; // 釣れるかどうか
-
     List<FishParameter> m_fishParamList;
+    List<FishParameter> m_finalFishParamList = new List<FishParameter>();
+    Image m_hpImage;
+
 
     // 番号を設定
     public void SetNumber(int num)
@@ -31,9 +34,46 @@ public class DrawFishHP : MonoBehaviour
         return m_number;
     }
 
+    /// <summary>
+    /// リセット処理。
+    /// </summary>
+    public void Reset()
+    {
+        Start();
+    }
+
+    /// <summary>
+    /// HPを取得。
+    /// </summary>
+    /// <returns></returns>
+    public int GetHP()
+    {
+        return Health;
+    }
+
+    /// <summary>
+    /// 攻撃力を取得。
+    /// </summary>
+    /// <returns></returns>
+    public int GetPower()
+    {
+        return m_power;
+    }
+
+    /// <summary>
+    /// 餌の種類を設定。
+    /// </summary>
+    /// <param name="feed"></param>
+    /// <returns></returns>
+    public void SetFeed(int feed)
+    {
+        m_feed = feed;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+
         string path = "Assets/Fishing/Parameter/FishList.asset";
         ScriptableObject obj = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path);
 
@@ -41,43 +81,51 @@ public class DrawFishHP : MonoBehaviour
         FishParamList fishList = obj as FishParamList;
         m_fishParamList = fishList.GetFishList();
 
-        // リスト分回す
-        for (int i = 0; i < m_fishParamList.Count; i++)
+        int fishCount = m_fishParamList.Count;
+
+        //リスト分回す。
+        for (int i = 0; i < fishCount; i++)
         {
-            // 合致しないなら中断
-            if (m_fishParamList[i].GetInternalNum() != m_number)
+            if((int)m_fishParamList[i].GetFishType() == m_feed)
             {
-                continue;
+                m_finalFishParamList.Add(m_fishParamList[i]);
             }
-
-            // 耐久値を設定
-            m_healthMax = m_fishParamList[i].GetHealth();
-            Health = m_fishParamList[i].GetHealth();
-
-            break;
         }
+
+        fishCount = m_finalFishParamList.Count;
+
+        m_number = Random.Range(0, fishCount);
+
+        // 耐久値を設定
+        m_healthMax = m_finalFishParamList[m_number].GetHealth();
+        Health = m_finalFishParamList[m_number].GetHealth();
+
+        //攻撃力を設定。
+        m_power = m_finalFishParamList[m_number].GetRank() * 5;
 
         // 耐久値を表示
         HPText.text = (Health + "/" + m_healthMax);
+
+        //HP画像を取得。
+        m_hpImage = GetComponent<Image>();
     }
 
     private void Update()
     {
-        // 耐久値が 0 のとき
-        if (Health <= HEALTH_MIN)
-        {
-            m_canFising = true;
-            return;
-        }
 
-        // 耐久値を表示
-        HPText.text = (Health + "/" + m_healthMax);
     }
 
     public void HealthDecrease(int damege)
     {
         // 耐久値を減少させる
         Health -= damege;
+
+        // 耐久値を表示
+        HPText.text = (Health + "/" + m_healthMax);
+
+        //ゲージを減少。
+        float fill = (float)Health / (float)m_healthMax;
+        m_hpImage.fillAmount = fill;
     }
 
 }

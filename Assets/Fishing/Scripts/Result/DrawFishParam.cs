@@ -16,6 +16,8 @@ public class DrawFishParam : MonoBehaviour
     TextMeshProUGUI GetMoneyText;
     [SerializeField, Header("New!テキスト")]
     GameObject      NewText;
+    [SerializeField, Header("DrawFishHP")]
+    DrawFishHP FishNumber;
 
     List<FishParameter> m_fishParamList;    // おさかなリスト
     SaveDataManager     m_saveDataManager;  // セーブデータ
@@ -34,8 +36,11 @@ public class DrawFishParam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //カーソルのロックを解除。
+        Cursor.lockState = CursorLockMode.None;
+
         // 番号を参照する
-        m_number = GetComponent<DrawFishHP>().GetNumber();
+        m_number = FishNumber.GetNumber();
 
         m_saveDataManager = FindObjectOfType<SaveDataManager>();
 
@@ -68,13 +73,24 @@ public class DrawFishParam : MonoBehaviour
             // 名前
             FishNameText.text = (m_fishParamList[i].GetName());
             // サイズ
-            SizeText.text = ("大きさ     " + rand.ToString() + "センチ");
+            SizeText.text = ("大きさ     " + rand.ToString() + "cm");
             // 獲得金額
             GetMoneyText.text = ("入手金額     ￥ " + m_fishParamList[i].GetMoney());
             m_money = m_fishParamList[i].GetMoney();
             // モデル
             GameObject FishModel = Instantiate(m_fishParamList[i].GetModel(), Position.transform.position, Quaternion.identity);
             FishModel.transform.localScale = new Vector3(50.0f, 50.0f, 50.0f);
+
+
+            //セーブデータを取得。
+            SaveDataManager saveManager = FindObjectOfType<SaveDataManager>();
+            //捕まえた数を増加。
+            saveManager.GetSaveData().saveData.GetNum[i]++;
+            //最大サイズを更新。
+            if (saveManager.GetSaveData().saveData.maxSize[i] < rand)
+            {
+                saveManager.GetSaveData().saveData.maxSize[i] = rand;
+            }
         }
     }
 }

@@ -14,6 +14,7 @@ public class BuyGoods : MonoBehaviour
     TextMeshProUGUI BuyText;
 
     SaveDataManager m_saveManager;  // ƒZ[ƒuƒf[ƒ^  
+    AudioSource m_audio;
     int             m_haveMoney;    // Œ»İŠ‚µ‚Ä‚¢‚é‹àŠz
     
     private void Start()
@@ -28,6 +29,8 @@ public class BuyGoods : MonoBehaviour
         HaveMoneyText.text = " " + m_haveMoney;
         BuyText.text = "w“ü ( " + Money + ")";
 
+        m_audio = GetComponent<AudioSource>();
+
         // Š‚µ‚Ä‚¢‚é‹àŠz‚ª 0 ˆÈ‰º‚È‚ç’†’f
         if (m_haveMoney <= 0 || m_haveMoney < Money)
         {
@@ -39,21 +42,22 @@ public class BuyGoods : MonoBehaviour
 
     private void Update()
     {
-        m_haveMoney = m_saveManager.GetSaveData().saveData.money;
 
-        // ‹àŠz‚ª 0 ˆÈ‰º‚È‚ç’†’f
-        if (m_haveMoney <= 0 || m_haveMoney < Money)
-        {
-            GetComponent<Button>().interactable = false;
-            return;
-        }
     }
 
     // Start is called before the first frame update
     public void Buy()
     {
+        m_audio.Play();
 
         m_saveManager.GetSaveData().saveData.money -= Money;
-        HaveMoneyText.text = " " + m_haveMoney;
+        HaveMoneyText.text = " " + m_saveManager.GetSaveData().saveData.money;
+
+        // ‹àŠz‚ª 0 ˆÈ‰º‚È‚ç’†’f
+        if (m_saveManager.GetSaveData().saveData.money <= 0 || m_saveManager.GetSaveData().saveData.money < Money)
+        {
+            GetComponent<Button>().interactable = false;
+            return;
+        }
     }
 }

@@ -65,9 +65,12 @@ public class PictureBook : MonoBehaviour
     /// <param name="num">表示させる番号</param>
     public void SetExplain(int num)
     {
+        //セーブデータを取得。
+        SaveDataManager saveManager = FindObjectOfType<SaveDataManager>();
+
         FishParameter fishParam = m_fishParamList[num];
 
         PictureBookExplain explain = FindAnyObjectByType<PictureBookExplain>();
-        explain.SetExplain(fishParam.GetName(), fishParam.GetSprite(), fishParam.GetExplain(), 99, 50.2f);
+        explain.SetExplain(fishParam.GetName(), fishParam.GetSprite(), fishParam.GetExplain(), saveManager.GetSaveData().saveData.GetNum[num], saveManager.GetSaveData().saveData.maxSize[num]);
     }
 }

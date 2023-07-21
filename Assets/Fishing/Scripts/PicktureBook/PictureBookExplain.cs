@@ -41,6 +41,9 @@ public class PictureBookExplain : MonoBehaviour
         //説明文を設定。
         m_explain.text = explain;
 
+        maxSize *= 10.0f;
+        maxSize = Mathf.Floor(maxSize) / 10.0f;
+
         //釣った数と最大サイズを設定。
         m_statistics.text = "釣った数   ... " + getNum +" 匹 \n最大サイズ... " + maxSize + "cm";
     }

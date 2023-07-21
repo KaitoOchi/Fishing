@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -12,6 +13,15 @@ public class PlayerMove : MonoBehaviour
     GameObject GameCamera;
     [SerializeField, Header("チャージ画像")]
     GameObject ChargeCanvas;
+    [SerializeField, Header("Fade")]
+    GameObject FadeCanvas;
+
+    [SerializeField, Header("餌画像")]
+    Image FeedImage1;
+    [SerializeField, Header("餌画像")]
+    Image FeedImage2;
+    [SerializeField, Header("餌画像")]
+    Image FeedImage3;
 
 
     /// <summary>
@@ -31,7 +41,8 @@ public class PlayerMove : MonoBehaviour
     Vector3         m_moveSpeed;            //移動速度。
     PlayerState     m_playerState;          //プレイヤーステート。
     bool            m_cursorLock = true;    //カーソルのロック状態。
-    float m_charge = 0.0f;
+    int             m_feed = 0;             //使用する餌。
+    int[]           m_feedNum = new int[3];
 
 
     /// <summary>
@@ -57,8 +68,8 @@ public class PlayerMove : MonoBehaviour
     /// </summary>
     public void NotifyStartFishing(float gauge)
     {
-        //釣りステートに遷移。
-        m_playerState = PlayerState.enState_Fishing;
+        //釣り開始状態にする。
+        m_animator.SetBool("FishingFlag", true);
 
         m_playerFishing.StartFishing(gauge, transform.position);
     }
@@ -87,6 +98,14 @@ public class PlayerMove : MonoBehaviour
 
         //カーソルをロック状態にする。
         Cursor.lockState = CursorLockMode.Locked;
+
+        //セーブデータを取得。
+        SaveDataManager saveManager = FindObjectOfType<SaveDataManager>();
+
+        for(int i = 0; i < 3; i++)
+        {
+            m_feedNum[i] = saveManager.GetSaveData().saveData.feed[i];
+        }
     }
 
     private void FixedUpdate()
@@ -174,11 +193,55 @@ public class PlayerMove : MonoBehaviour
     /// </summary>
     void InputKey()
     {
+        if(!GetCanMove())
+        {
+            return;
+        }
+
         //左クリックが入力されたら。
         if(Input.GetMouseButtonDown(1))
         {
+            if(m_feedNum[m_feed] <= 0)
+            {
+                return;
+            }
+
+            //釣りステートへ遷移。
+            m_playerState = PlayerState.enState_Fishing;
+
             GameObject obj = Instantiate(ChargeCanvas);
             obj.GetComponent<ChargeGauge>().SetPlayerMove(this);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            //フェードオブジェクトを生成
+            GameObject fadeCanvas = Instantiate(FadeCanvas);
+
+            //フェードを開始
+            fadeCanvas.GetComponent<FadeScene>().FadeStart("MainMenu");
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            FeedImage1.color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+            FeedImage2.color = new Vector4(1.0f, 1.0f, 1.0f, 0.2f);
+            FeedImage3.color = new Vector4(1.0f, 1.0f, 1.0f, 0.2f);
+            m_feed = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            FeedImage1.color = new Vector4(1.0f, 1.0f, 1.0f, 0.2f);
+            FeedImage2.color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+            FeedImage3.color = new Vector4(1.0f, 1.0f, 1.0f, 0.2f);
+            m_feed = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            FeedImage1.color = new Vector4(1.0f, 1.0f, 1.0f, 0.2f);
+            FeedImage2.color = new Vector4(1.0f, 1.0f, 1.0f, 0.2f);
+            FeedImage3.color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+            m_feed = 2;
         }
     }
 
@@ -242,8 +305,6 @@ public class PlayerMove : MonoBehaviour
     /// </summary>
     void ProcessFishingStateTransition()
     {
-        //釣り開始状態にする。
-        m_animator.SetBool("FishingFlag", true);
     }
 
     /// <summary>

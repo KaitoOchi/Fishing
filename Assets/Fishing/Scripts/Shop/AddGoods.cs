@@ -17,7 +17,6 @@ public class AddGoods : MonoBehaviour
 
     SaveDataManager m_saveDataManager;  // セーブデータ
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +24,7 @@ public class AddGoods : MonoBehaviour
         m_saveDataManager = FindObjectOfType<SaveDataManager>();
         HaveFeed = m_saveDataManager.GetSaveData().saveData.feed[ArrayNumber];
 
-        if(HaveFeed>= HAVEFEED_MAX)
+        if (HaveFeed>= HAVEFEED_MAX)
         {
             // ボタンを押せないようにする
             GetComponent<Button>().interactable = false;
