@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class ResourceFishList : MonoBehaviour
 {
+    [SerializeField, Header("さかなリスト")]
+    FishParamList FishList;
+
     List<FishParameter> m_fishList;
 
     /// <summary>
@@ -16,18 +18,12 @@ public class ResourceFishList : MonoBehaviour
         return m_fishList;
     }
 
-#if UNITY_EDITOR
     // Start is called before the first frame update
     void Start()
     {
-        string path = "Assets/Fishing/Parameter/FishList.asset";
-        ScriptableObject obj = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path);
-
         //おさかなリストを取得。
-        FishParamList fishList = obj as FishParamList;
-        m_fishList = fishList.GetFishList();
+        m_fishList = FishList.GetFishList();
     }
-#endif
 
     private void Awake()
     {
